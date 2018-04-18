@@ -23,8 +23,7 @@ def main(filename):
     with open("wordcount.csv",'w')as csv_file:
         writer=csv.writer(csv_file)
         writer.writerow(['word','count'])
-        for vocabulary,number in counter.most_common():
-            writer.writerow([vocabulary,str(number)])
+        writer.writerow(counter.most_common())
         csv_file.close()
     with open("wordcount.pkl",'wb')as pkl_file:
         pickle.dump(counter,pkl_file)
