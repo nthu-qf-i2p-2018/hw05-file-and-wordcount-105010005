@@ -27,21 +27,7 @@ def main(filename):
         csv_file.close()
     with open("wordcount.pkl",'wb')as pkl_file:
         pickle.dump(counter,pkl_file)
-        pkl_file.close()
-    
-        
-    
-        
-        
-    
-        
-if __name__ == '__main__':
-    main('i_have_a_dream.txt')     
-        
-    
-        
-        
-    
-        
+        pkl_file.close()    
+
 if __name__ == '__main__':
     main('i_have_a_dream.txt')
