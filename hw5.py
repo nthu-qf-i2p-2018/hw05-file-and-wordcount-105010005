@@ -20,7 +20,7 @@ def main(filename):
     with open("wordcount.json",'w') as json_file:
         json.dump(counter.most_common(),json_file)
         json_file.close()
-    with open("wordcount.csv",'w')as csv_file:
+    with open("wordcount.csv",'w',newline='')as csv_file:
         writer=csv.writer(csv_file)
         writer.writerow(['word','count'])
         writer.writerows(counter.most_common())
